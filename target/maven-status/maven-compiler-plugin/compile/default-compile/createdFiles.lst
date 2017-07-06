@@ -1,0 +1,6 @@
+com\musicgroup\data\configuration\MusicRootConfig.class
+com\musicgroup\services\ProductServiceImpl.class
+com\musicgroup\main\MainApp.class
+com\musicgroup\model\Product.class
+com\musicgroup\repositories\ProductRepository.class
+com\musicgroup\services\ProductService.class

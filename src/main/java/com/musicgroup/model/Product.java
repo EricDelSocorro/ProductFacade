@@ -33,6 +33,9 @@ public class Product {
 	
 	@Column(name="message")
 	private String message;
+	
+	@Column(name="image")
+	private String image;
 
 	public int getId() {
 		return id;
@@ -75,6 +78,13 @@ public class Product {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	@Override
 	public String toString() {

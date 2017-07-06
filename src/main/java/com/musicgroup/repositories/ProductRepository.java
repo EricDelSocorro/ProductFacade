@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import com.musicgroup.model.Product;
 
-
 @Repository
 public class ProductRepository {
 
@@ -19,19 +18,18 @@ public class ProductRepository {
 	private SessionFactory sessionFactory;
 	
 	public Product getProduct(String code) {
-		Criteria criteria = sessionFactory.getCurrentSession()
-					.createCriteria(Product.class)
-					.add(Restrictions.eq("code", code));
-	
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Product.class);
+		criteria.add(Restrictions.eq("code", code));
 		Product product = (Product) criteria.uniqueResult();
-	
-		if (product != null) {
+		
+		if (product !=null) {
 			return product;
 		} else {
 			return new Product();
 		}
+		
 	}
-
+ 
 	@SuppressWarnings("unchecked")
 	public List<Product> getAllProducts() {
 		Query query = sessionFactory.getCurrentSession().createQuery("from Product");

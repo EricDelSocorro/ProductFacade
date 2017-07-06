@@ -15,6 +15,7 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private  ProductRepository productRepository;
 	
+	@Transactional(readOnly = true)
 	public Product getProduct(String code) {
 		return this.productRepository.getProduct(code);
 	}
