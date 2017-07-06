@@ -90,6 +90,4 @@ public class Product {
 	public String toString() {
 		return code + " - "+ name + " - "+ description + " - "+ price;
 	}
-	
-	
 }
